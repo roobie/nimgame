@@ -46,6 +46,8 @@ method clear*(obj: PState) =
 
 method count*(obj: PState): int {.inline.} =
   ## Get number of entities in state.
+  if obj == nil:
+    return -1
   return obj.fEntityList.len
 
 
