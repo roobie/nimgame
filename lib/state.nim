@@ -146,6 +146,8 @@ method collideList*(obj: PState, kind1, kind2: string): seq[tuple[a, b: PEntity]
 # render
 
 proc renderState*(obj: PState) =
+  if obj == nil:
+    return
   for entity in obj.fEntityList.items():
     entity.render()
 

@@ -106,7 +106,7 @@ proc newEngine*(width: int = 640,   # screen width
   # screen
   result.fScreen.surface = check(setVideoMode(result.fScreen.width,
                                               result.fScreen.height,
-                                              32, int32(flags)))
+                                              32, uint32(flags)))
   initScreenBuffer(width, height, scale)
   result.bgColor = mapRGB(result.fScreen.surface.format,
                           bgColor.r, bgColor.g, bgColor.b)
